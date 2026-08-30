@@ -1,5 +1,5 @@
 public interface Subject {
-    void register(Observer o);
+    void registerObserver(Observer o);
     void remove(Observer o);
     void notifyObservers();
 }

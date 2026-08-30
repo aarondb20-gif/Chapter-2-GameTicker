@@ -18,7 +18,7 @@ public class GameTicker implements Subject{
     }
 
     @Override
-    public void register(Observer o) {
+    public void registerObserver(Observer o) {
 
     }
 

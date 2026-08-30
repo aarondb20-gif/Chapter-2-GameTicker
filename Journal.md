@@ -16,3 +16,9 @@ list, and will broadcast updates to every class that implements the observer int
 Phase 4
 I used the push method, and added a String variable to the update method in the interface so that data could be passed  
 directly from the subject to observers through the update.
+
+Phase 5
+If I used the pull method I would create getter methods for the observers in GameTicker, and add the subject class to the observer  
+classes as a variable that they can access the getters from. The push method is useful when you want to send the same data
+to many observers, like different news outlets. The pull method is better used when each observer wants different pieces
+of data (weather, sports news, local news).
