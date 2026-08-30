@@ -12,3 +12,7 @@ inheritance.
 Phase 3
 The Subject doesn't need to know what kind of displays are listening. It will loop through every observer in the    
 list, and will broadcast updates to every class that implements the observer interface.
+
+Phase 4
+I used the push method, and added a String variable to the update method in the interface so that data could be passed  
+directly from the subject to observers through the update.
