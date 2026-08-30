@@ -8,3 +8,7 @@ Phase 2
 The Subject and Observer interfaces create an abstract contract between the subject and observer classes,so
 that methods can be passed between them without changing or breaking the code of any of the classes through direct
 inheritance.
+
+Phase 3
+The Subject doesn't need to know what kind of displays are listening. It will loop through every observer in the    
+list, and will broadcast updates to every class that implements the observer interface.
