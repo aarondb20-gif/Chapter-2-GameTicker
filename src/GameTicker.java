@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameTicker implements Subject{
     protected ArrayList<String> updates = new ArrayList<>();
-    protected ArrayList<Observer> observers = new ArrayList<>();
-    private String newsData;
+    protected final List<Observer> observers = new ArrayList<>();
 
+    protected String data;
 
     public void addUpdate(String data){
-        this.newsData = data;
+        this.data = data;
         notifyObservers();
 
     }
@@ -19,18 +20,22 @@ public class GameTicker implements Subject{
 
     @Override
     public void registerObserver(Observer o) {
+        //add observers
+        observers.add(o);
 
     }
 
     @Override
     public void remove(Observer o) {
+        // remove observers
+        observers.remove(o);
 
     }
 
     @Override
     public void notifyObservers() {
         for(Observer o : observers){
-            o.update(newsData);
+            o.update(data);
         }
 
     }

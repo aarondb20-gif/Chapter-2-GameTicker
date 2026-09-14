@@ -10,9 +10,6 @@ public class Main {
         gameTicker.registerObserver(sd);
         gameTicker.registerObserver(smb);
 
-
-
-        gameTicker.addUpdate("Saints vs Cowboys: 27 / 24");
-        gameTicker.notifyObservers();
+        gameTicker.addUpdate("Cowboys vs Saints: 24 - 27.");
     }
 }
