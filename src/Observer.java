@@ -1,4 +1,4 @@
 public interface Observer {
-     void update(String data);
+     void update(Subject subject);
 
 }

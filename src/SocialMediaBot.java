@@ -1,9 +1,14 @@
 public class SocialMediaBot implements Observer{
 
-    @Override
-    public void update(String data) {
-        System.out.println("TWEET: " + data + " #GameDay");
 
+    @Override
+    public void update(Subject subject) {
+        if(subject instanceof GameTicker news){
+            String temp = news.getSportsNews();
+            System.out.println("TWEET: " + temp + " #GameDay");
+        }
 
     }
+    
+
 }

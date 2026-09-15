@@ -5,10 +5,30 @@ public class GameTicker implements Subject{
     protected ArrayList<String> updates = new ArrayList<>();
     protected final List<Observer> observers = new ArrayList<>();
 
-    protected String data;
+    private String sportsNews;
+    private String techNews;
+    private String weatherNews;
+    private String politicsNews;
 
-    public void addUpdate(String data){
-        this.data = data;
+    public String getSportsNews(){
+        return sportsNews;
+    }
+    public String getTechNews(){
+        return techNews;
+
+    }
+    public String getWeatherNews(){
+        return weatherNews;
+    }
+
+    public String getPoliticsNews(){
+        return politicsNews;
+    }
+    public void setNewsUpdate(String sportsNews, String techNews, String weatherNews, String politicsNews){
+        this.sportsNews = sportsNews;
+        this.techNews = techNews;
+        this.weatherNews = weatherNews;
+        this.politicsNews = politicsNews;
         notifyObservers();
 
     }
@@ -35,7 +55,8 @@ public class GameTicker implements Subject{
     @Override
     public void notifyObservers() {
         for(Observer o : observers){
-            o.update(data);
+            o.update(this);
+
         }
 
     }

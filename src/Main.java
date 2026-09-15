@@ -12,6 +12,12 @@ public class Main {
         gameTicker.registerObserver(smb);
         gameTicker.registerObserver(fn);
 
-        gameTicker.addUpdate("Cowboys vs Saints: 24 - 27.");
+        gameTicker.setNewsUpdate(
+                "Saints vs Lions: 30-31",
+                "Laptop on Sale!",
+                "Flash Flood Warning!",
+                "White House Press Conference.");
+
+
     }
 }
